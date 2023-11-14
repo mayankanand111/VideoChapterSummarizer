@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chapter Summarizer(Finetuned on Neural Networks for Machine Learning by Dr. Geoffrey Hinton, UofT)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        textarea {
+            padding: 15px; /* Increased padding for a larger text field */
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 70%; /* Adjust the width as needed */
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Chapter Summarizer</h1>
+    <h2>Finetuned on 78 videos of Machine Learning — Geoffrey Hinton, UofT [FULL COURSE]</h2>
+    <h3>Retrieve key moments from videos. Please note that our current system supports videos with a maximum length of 5 minutes due to token size limitations.</h3>
+    <form method="POST" action="/get_timeline">
+        <label for="prompt">Enter Prompt:</label>
+        <textarea id="prompt" name="prompt" rows="4" required></textarea>
+        <button type="submit">Generate Key Moments</button>
+    </form>
+</body>
+</html>

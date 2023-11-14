@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Timeline</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2ecc71; /* Blue color */
+        }
+
+        .timeline {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .event {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #2ecc71; /* Green color */
+            border-radius: 50%; /* Keep border-radius for circles */
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .event:hover {
+            background-color: #27ae60; /* Darker green color on hover */
+        }
+
+        .timestamp {
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-top: 5px;
+            font-size: 1.2em; /* Increased font size */
+        }
+
+        .chapter {
+            margin-top: 5px;
+            color: #666;
+            text-align: center;
+            font-size: 1em; /* Increased font size */
+        }
+
+        /* Ruler Line Style */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 2px; /* Adjust the thickness of the ruler line */
+            width: 100%;
+            background-color: #2ecc71; /* Green color */
+            transform: translateY(-50%);
+            z-index: -1; /* Place the ruler line behind the dots */
+        }
+    </style>
+</head>
+<body>
+    <h1>Predicted Key Moments</h1>
+
+    <div class="timeline">
+        {% for entry in chapters %}
+            <div class="event" style="left: {{ loop.index * 10 }}%">
+                <p class="timestamp">{{ entry.timestamp }}</p>
+                <p class="chapter">{{ entry.chapter }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
