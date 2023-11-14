@@ -2,6 +2,8 @@
 
 Hi all, Thanks for landing to see this demo!
 
+[Click here to see Demo](https://drive.google.com/file/d/1IIRNIgHwjIS58LhF86HzJlir-sUzmSxX/view?usp=share_link)
+
 Objective: My goal is to help you extract key moments from a video when you provide captions/transcripts, eliminating the need to watch the entire video. This way, you can effortlessly navigate to the specific key moment you are searching for in your recorded teams’ meetings or university video lectures.
 
 Contributions: 
